@@ -8,6 +8,7 @@ module Kitchen
       if File.directory?(path)
         tmp_root = Dir.mktmpdir('gzipped_chef_upload')
         gzip_path = "#{tmp_root}/#{dir}.tar.gz"
+        info("Compressing #{dir} into #{dir}.tar.gz")
         system "cd #{path} && tar -zcf #{gzip_path} ."
         super(scp, gzip_path, "#{dir}.tar.gz")
         scp.session.exec! "cd #{chef_home} && mkdir #{dir} && " +

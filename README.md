@@ -1,8 +1,8 @@
 # kitchen-sshgzip
 
-Adds 2 new drivers to test-kitchen.
+Adds 2 new drivers to test-kitchen
 
-* ssh_gzip - same as SSHBase, only dirs are gzipped and extracted for upload
+* ssh_gzip - same as ssh_base, only dirs are gzipped and extracted for upload
 * digitalocean_gzip - same as digitalocean, only see above
 
 ## Installation
